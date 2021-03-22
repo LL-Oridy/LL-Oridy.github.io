@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -188,6 +188,78 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ll-oridy.github.io/2021/03/22/next-%E5%92%8CnextLine-%E5%8C%BA%E5%88%AB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dai Ying">
+      <meta itemprop="description" content="myblog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DY">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/22/next-%E5%92%8CnextLine-%E5%8C%BA%E5%88%AB/" class="post-title-link" itemprop="url">next()和nextLine()区别</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-22 20:32:57 / 修改时间：20:47:09" itemprop="dateCreated datePublished" datetime="2021-03-22T20:32:57+08:00">2021-03-22</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="scanner-nextLine-遇换行结束"><a href="#scanner-nextLine-遇换行结束" class="headerlink" title="scanner.nextLine()遇换行结束"></a>scanner.nextLine()遇换行结束</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> math;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Mathe0</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//接收数据输入</span></span><br><span class="line">        Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        System.out.println(<span class="string">&quot;使用nextLine方式接收：&quot;</span>);</span><br><span class="line">        <span class="comment">//判断用户有没有输入字符串</span></span><br><span class="line">        <span class="keyword">if</span>(scanner.hasNextLine())&#123;</span><br><span class="line">            <span class="comment">//程序等待用户输入完毕</span></span><br><span class="line">            String str = scanner.nextLine();</span><br><span class="line">            System.out.println(<span class="string">&quot;输出的方式为：&quot;</span>+str);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//凡是属于IO的类如果不关闭会占用资源</span></span><br><span class="line">        scanner.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以删除if语句，下面是运行截图</p>
+<p><img src="https://i.loli.net/2021/03/22/JP1iqITmfM4EZLK.png" alt="image"></p>
+<h2 id="scanner-next-遇空格结束"><a href="#scanner-next-遇空格结束" class="headerlink" title="scanner.next()遇空格结束"></a>scanner.next()遇空格结束</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> math;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Mathe0</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//接收数据输入</span></span><br><span class="line">        Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        System.out.println(<span class="string">&quot;使用next方式接收：&quot;</span>);</span><br><span class="line">        <span class="comment">//判断用户有没有输入字符串</span></span><br><span class="line">        <span class="keyword">if</span>(scanner.hasNext())&#123;</span><br><span class="line">            <span class="comment">//程序等待用户输入完毕</span></span><br><span class="line">            String str = scanner.next();</span><br><span class="line">            System.out.println(<span class="string">&quot;输出的方式为：&quot;</span>+str);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//凡是属于IO的类如果不关闭会占用资源</span></span><br><span class="line">        scanner.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>下面是截图</p>
+<p><img src="https://i.loli.net/2021/03/22/DMHoKzS9AtQhrNl.png" alt="image"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -811,7 +883,7 @@
     <div class="post-body" itemprop="articleBody">
           <h1 id="Daiyingの世界"><a href="#Daiyingの世界" class="headerlink" title="Daiyingの世界"></a>Daiyingの世界</h1><h2 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h2><p>&ensp;&ensp;大家好，我是一名在读的大二学生，出生于湖北武汉，也是编程届的一个咸的不行的咸鱼。我的学习虽然很差劲，读的学校也非常辣鸡，但是我还是对未来的生活抱有希望，在这个博客我将记录我的日常学习生活和新学习的知识点。可能内容非常简单基础，对我而言也算是一种知识的积累。毕竟我认为我自己对于编程来说甚至都还没有入门，不过我相信只要我努力学，总有一天会上路的！</p>
 <h2 id="我的生活"><a href="#我的生活" class="headerlink" title="我的生活"></a>我的生活</h2><p>&ensp;&ensp;在业余时间我最常做的事就是追星，玩游戏和看书，我最喜欢的明星是来自BLACKPINK的金智秀，最喜欢玩的游戏也是智秀代言的跑跑卡丁车，最喜欢看的书是悬疑小说，尤其是作家宁杭一写的悬疑小说，我觉得他的《超禁忌游戏》最好看。每天我都会刷B站和微博，也会经常在Netflix上面看电影和动漫。我觉得我的生活每一天都很充实。</p>
-<h2 id="我的联系方式"><a href="#我的联系方式" class="headerlink" title="我的联系方式"></a>我的联系方式</h2><h3 id="我的邮箱：-108-108-111-x72-x69-100-x79-x40-49-x36-x33-x2e-99-111-109"><a href="#我的邮箱：-108-108-111-x72-x69-100-x79-x40-49-x36-x33-x2e-99-111-109" class="headerlink" title="我的邮箱：&#108;&#108;&#111;&#x72;&#x69;&#100;&#x79;&#x40;&#49;&#x36;&#x33;&#x2e;&#99;&#111;&#109;"></a>我的邮箱：<a href="mailto:&#108;&#108;&#111;&#x72;&#x69;&#100;&#x79;&#x40;&#49;&#x36;&#x33;&#x2e;&#99;&#111;&#109;">&#108;&#108;&#111;&#x72;&#x69;&#100;&#x79;&#x40;&#49;&#x36;&#x33;&#x2e;&#99;&#111;&#109;</a></h3><h3 id="我的IG-欢迎大家来玩！"><a href="#我的IG-欢迎大家来玩！" class="headerlink" title="我的IG,欢迎大家来玩！"></a>我的<a target="_blank" rel="noopener" href="https://www.instagram.com/suzuyu_d/">IG</a>,欢迎大家来玩！</h3><p>以上よろしくお願いいたします。</p>
+<h2 id="我的联系方式"><a href="#我的联系方式" class="headerlink" title="我的联系方式"></a>我的联系方式</h2><h3 id="我的邮箱：-108-108-111-x72-105-100-121-x40-x31-x36-x33-x2e-99-x6f-x6d"><a href="#我的邮箱：-108-108-111-x72-105-100-121-x40-x31-x36-x33-x2e-99-x6f-x6d" class="headerlink" title="我的邮箱：&#108;&#108;&#111;&#x72;&#105;&#100;&#121;&#x40;&#x31;&#x36;&#x33;&#x2e;&#99;&#x6f;&#x6d;"></a>我的邮箱：<a href="mailto:&#108;&#108;&#111;&#x72;&#105;&#100;&#121;&#x40;&#x31;&#x36;&#x33;&#x2e;&#99;&#x6f;&#x6d;">&#108;&#108;&#111;&#x72;&#105;&#100;&#121;&#x40;&#x31;&#x36;&#x33;&#x2e;&#99;&#x6f;&#x6d;</a></h3><h3 id="我的IG-欢迎大家来玩！"><a href="#我的IG-欢迎大家来玩！" class="headerlink" title="我的IG,欢迎大家来玩！"></a>我的<a target="_blank" rel="noopener" href="https://www.instagram.com/suzuyu_d/">IG</a>,欢迎大家来玩！</h3><p>以上よろしくお願いいたします。</p>
 
       
     </div>
