@@ -23,22 +23,20 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"ll-oridy.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
-<meta name="description" content="&amp;nbsp;&amp;nbsp;在课后作业中我遇到了这样一个问题。课后作业的题目是这样的:  从键盘上输入一个数字或字母，程序判断后输出结果：输入的字符是数字还是字母（提示：通过ASCII值来判断是数字还是字母）  &amp;nbsp;&amp;nbsp;那么问题就来了，输入的要求是字符，还要结合ASCII码表，课本也没有写输入单个字符的写法，在上网搜寻之后，我发现了有这样的几种写法： 写法一12Scanner in &amp;">
+<meta name="description" content="&amp;nbsp;&amp;nbsp;方法的重載在java中是一個比較重要的知識點，方法重載的最大特點是，方法可以相同，但是参数必须不同,可以由下面这段代码来理解 123456789101112131415161718192021222324252627282930313233343536373839404142434445package method;&#x2F;&#x2F;方法的重載public class Demo02 &amp;#">
 <meta property="og:type" content="article">
-<meta property="og:title" content="输入单个字符滴几种方法">
-<meta property="og:url" content="http://ll-oridy.github.io/2021/03/12/%E8%BE%93%E5%85%A5%E5%8D%95%E4%B8%AA%E5%AD%97%E7%AC%A6%E6%BB%B4%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:title" content="Java中最基本的方法重載問題">
+<meta property="og:url" content="http://ll-oridy.github.io/2021/03/27/Java%E4%B8%AD%E6%9C%80%E5%9F%BA%E6%9C%AC%E7%9A%84%E6%96%B9%E6%B3%95%E9%87%8D%E8%BC%89%E5%95%8F%E9%A1%8C/index.html">
 <meta property="og:site_name" content="DY">
-<meta property="og:description" content="&amp;nbsp;&amp;nbsp;在课后作业中我遇到了这样一个问题。课后作业的题目是这样的:  从键盘上输入一个数字或字母，程序判断后输出结果：输入的字符是数字还是字母（提示：通过ASCII值来判断是数字还是字母）  &amp;nbsp;&amp;nbsp;那么问题就来了，输入的要求是字符，还要结合ASCII码表，课本也没有写输入单个字符的写法，在上网搜寻之后，我发现了有这样的几种写法： 写法一12Scanner in &amp;">
+<meta property="og:description" content="&amp;nbsp;&amp;nbsp;方法的重載在java中是一個比較重要的知識點，方法重載的最大特點是，方法可以相同，但是参数必须不同,可以由下面这段代码来理解 123456789101112131415161718192021222324252627282930313233343536373839404142434445package method;&#x2F;&#x2F;方法的重載public class Demo02 &amp;#">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://i.loli.net/2021/03/12/VYqfzh4HKjJw5Dt.png">
-<meta property="article:published_time" content="2021-03-12T11:52:31.000Z">
-<meta property="article:modified_time" content="2021-03-12T12:42:38.499Z">
+<meta property="article:published_time" content="2021-03-27T07:06:12.000Z">
+<meta property="article:modified_time" content="2021-03-27T07:11:31.668Z">
 <meta property="article:author" content="Dai Ying">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.loli.net/2021/03/12/VYqfzh4HKjJw5Dt.png">
 
 
-<link rel="canonical" href="http://ll-oridy.github.io/2021/03/12/%E8%BE%93%E5%85%A5%E5%8D%95%E4%B8%AA%E5%AD%97%E7%AC%A6%E6%BB%B4%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/">
+<link rel="canonical" href="http://ll-oridy.github.io/2021/03/27/Java%E4%B8%AD%E6%9C%80%E5%9F%BA%E6%9C%AC%E7%9A%84%E6%96%B9%E6%B3%95%E9%87%8D%E8%BC%89%E5%95%8F%E9%A1%8C/">
 
 
 <script class="page-configurations">
@@ -50,7 +48,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>输入单个字符滴几种方法 | DY</title>
+<title>Java中最基本的方法重載問題 | DY</title>
   
 
 
@@ -137,7 +135,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -150,7 +148,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%99%E6%B3%95%E4%B8%80"><span class="nav-number">1.</span> <span class="nav-text">写法一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%99%E6%B3%95%E4%BA%8C"><span class="nav-number">2.</span> <span class="nav-text">写法二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%99%E6%B3%95%E4%B8%89"><span class="nav-number">3.</span> <span class="nav-text">写法三</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -203,7 +200,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://ll-oridy.github.io/2021/03/12/%E8%BE%93%E5%85%A5%E5%8D%95%E4%B8%AA%E5%AD%97%E7%AC%A6%E6%BB%B4%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/">
+    <link itemprop="mainEntityOfPage" href="http://ll-oridy.github.io/2021/03/27/Java%E4%B8%AD%E6%9C%80%E5%9F%BA%E6%9C%AC%E7%9A%84%E6%96%B9%E6%B3%95%E9%87%8D%E8%BC%89%E5%95%8F%E9%A1%8C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -216,7 +213,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          输入单个字符滴几种方法
+          Java中最基本的方法重載問題
         </h1>
 
         <div class="post-meta-container">
@@ -228,7 +225,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-03-12 19:52:31 / 修改时间：20:42:38" itemprop="dateCreated datePublished" datetime="2021-03-12T19:52:31+08:00">2021-03-12</time>
+      <time title="创建时间：2021-03-27 15:06:12 / 修改时间：15:11:31" itemprop="dateCreated datePublished" datetime="2021-03-27T15:06:12+08:00">2021-03-27</time>
     </span>
 
   
@@ -241,25 +238,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>&nbsp;&nbsp;在课后作业中我遇到了这样一个问题。课后作业的题目是这样的:</p>
-<blockquote>
-<p>从键盘上输入一个数字或字母，程序判断后输出结果：输入的字符是数字还是字母（提示：通过ASCII值来判断是数字还是字母）</p>
-</blockquote>
-<p>&nbsp;&nbsp;那么问题就来了，输入的要求是字符，还要结合ASCII码表，课本也没有写输入单个字符的写法，在上网搜寻之后，我发现了有这样的几种写法：</p>
-<h3 id="写法一"><a href="#写法一" class="headerlink" title="写法一"></a>写法一</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Scanner in &#x3D; new Scanner(System.in);</span><br><span class="line">char b &#x3D; in.next().charAt(0);</span><br></pre></td></tr></table></figure>
+        <p>&nbsp;&nbsp;方法的重載在java中是一個比較重要的知識點，方法重載的最大特點是，方法可以相同，但是<strong>参数</strong>必须不同,可以由下面这段代码来理解</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> method;</span><br><span class="line"><span class="comment">//方法的重載</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo02</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> maxNum = max(<span class="number">2</span>,<span class="number">3</span>);<span class="comment">//調用int方法</span></span><br><span class="line">        <span class="comment">//double maxNum = max(2.0,3.0);調用double方法</span></span><br><span class="line">        <span class="comment">//調用哪個用那個</span></span><br><span class="line">        System.out.println(maxNum);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//int方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> num,<span class="keyword">int</span> num1)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> result = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(num == num1)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;两个数相等&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(num&gt;num1)&#123;</span><br><span class="line">            result = num;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            result = num1;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> result;<span class="comment">//终止方法</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//double方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">double</span> <span class="title">max</span><span class="params">(<span class="keyword">double</span> num,<span class="keyword">double</span> num1)</span></span>&#123;</span><br><span class="line">        <span class="keyword">double</span> result = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(num == num1)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;两个数相等&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(num&gt;num1)&#123;</span><br><span class="line">            result = num;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            result = num1;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> result;<span class="comment">//终止方法</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/*public static double max(double num,double num1)//这是用double</span></span><br><span class="line"><span class="comment">    public static int max(int num,int num1)*/</span><span class="comment">//这是用int</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>这样的写法很简便，如果输入多个字符读取的只有第一个字符(当然这是理所当然的)</p>
-<h3 id="写法二"><a href="#写法二" class="headerlink" title="写法二"></a>写法二</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">char b &#x3D; in.next().toCharArray()[0];</span><br></pre></td></tr></table></figure>
-
-<p>我没有试过</p>
-<h3 id="写法三"><a href="#写法三" class="headerlink" title="写法三"></a>写法三</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import java.io.BufferedReader;</span><br><span class="line">import java.io.IOException;</span><br><span class="line">import java.io.InputStreamReader;</span><br><span class="line">char b &#x3D; (char)new BufferedReader(new InputStreamReader(System.in)).read()</span><br></pre></td></tr></table></figure>
-
-<p>要导入很多包，很麻烦</p>
-<p>以上都是在搜寻问题时找到的大佬归纳的答案。下面附上我对这道题的运行代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">public class Test5 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Scanner in &#x3D; new Scanner(System.in);</span><br><span class="line">        System.out.print(&quot;请输入字符: &quot;);</span><br><span class="line">        char b &#x3D; in.next().charAt(0);</span><br><span class="line">        if (b &gt;&#x3D; 97 &amp;&amp; b &lt;&#x3D; 122)</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.println(&quot;小写&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        else if (b &gt;&#x3D; 65 &amp;&amp; b &lt;&#x3D; 90)&#123;</span><br><span class="line">            System.out.println(&quot;大写&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        else if(b &gt;&#x3D; 48 &amp;&amp; b &lt;&#x3D; 57)&#123;</span><br><span class="line">            System.out.println(&quot;数字&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        else&#123;</span><br><span class="line">            System.out.println(&quot;啥也不是&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>下面是运行截图(我试试上传一个图片，还没有有用过这个功能^^)</p>
-<p><img src="https://i.loli.net/2021/03/12/VYqfzh4HKjJw5Dt.png" alt="image"></p>
+<p>调用哪个用哪个。</p>
 
     </div>
 
@@ -273,14 +255,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/03/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E5%88%9D%E8%AF%86/" rel="prev" title="计算机网络的初识">
-                  <i class="fa fa-chevron-left"></i> 计算机网络的初识
+                <a href="/2021/03/25/Java%E7%9A%84%E4%B8%89%E8%A7%92%E5%BD%A2%E6%89%93%E5%8D%B0/" rel="prev" title="Java的三角形打印">
+                  <i class="fa fa-chevron-left"></i> Java的三角形打印
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/03/21/JAVA%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/" rel="next" title="JAVA的命名规范">
-                  JAVA的命名规范 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
