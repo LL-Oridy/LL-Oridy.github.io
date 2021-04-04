@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -188,6 +188,225 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ll-oridy.github.io/2021/04/04/Python%E4%B8%AD%E7%9A%84%E8%B4%A8%E6%95%B0%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dai Ying">
+      <meta itemprop="description" content="myblog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DY">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/04/Python%E4%B8%AD%E7%9A%84%E8%B4%A8%E6%95%B0%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">Python中的质数问题</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-04-04 10:45:50 / 修改时间：11:09:47" itemprop="dateCreated datePublished" datetime="2021-04-04T10:45:50+08:00">2021-04-04</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>质数问题一直都是一个我很头疼的问题，我认为必须注意的点是缩进</p>
+<h3 id="求质数"><a href="#求质数" class="headerlink" title="求质数"></a>求质数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">prime</span>(<span class="params">p</span>):</span></span><br><span class="line">    <span class="keyword">if</span> p &lt;= <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    <span class="keyword">if</span> p == <span class="number">2</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">    <span class="keyword">if</span> p &gt; <span class="number">2</span>:</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,p):</span><br><span class="line">            <span class="keyword">if</span>(p % i) == <span class="number">0</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">                <span class="keyword">break</span><span class="comment">###容易被漏掉</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span><span class="comment">###这里的缩进要格外注意</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ll-oridy.github.io/2021/04/04/Python%E4%B8%AD%E5%8F%A5%E5%AD%90%E9%A6%96%E5%AD%97%E6%AF%8D%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dai Ying">
+      <meta itemprop="description" content="myblog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DY">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/04/Python%E4%B8%AD%E5%8F%A5%E5%AD%90%E9%A6%96%E5%AD%97%E6%AF%8D%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">Python中句子首字母问题</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-04-04 10:45:08 / 修改时间：11:05:01" itemprop="dateCreated datePublished" datetime="2021-04-04T10:45:08+08:00">2021-04-04</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>&nbsp;&nbsp;首字母的大小写结合就是”personal computer”–&gt;”PC”的问题。先要将字符串中每个单词的大写字母摘出来，然后放进一个新的数组，最后再依次遍历。</p>
+<h3 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">acronym</span>(<span class="params">p</span>):</span></span><br><span class="line">    p = p.title()</span><br><span class="line">    list12 = [word[<span class="number">0</span>] <span class="keyword">for</span> word <span class="keyword">in</span> p.split()]</span><br><span class="line">    <span class="built_in">str</span> = <span class="string">&#x27;&#x27;</span>.join(list12)</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">str</span></span><br></pre></td></tr></table></figure>
+
+<p>自定义函数体进行计算</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">list12 = [word[<span class="number">0</span>] <span class="keyword">for</span> word <span class="keyword">in</span> p.split()]</span><br></pre></td></tr></table></figure>
+
+<p>将p这个传入的字符串进行切割，title之后如”Personal Computer”变成了”Personal””Computer”,取每个字符串的第0位，取出大写字母，再将它放入数组中，表现形式为[“P”,”C”]</p>
+<h3 id="数组和字符串的相互转换"><a href="#数组和字符串的相互转换" class="headerlink" title="数组和字符串的相互转换"></a>数组和字符串的相互转换</h3><p>数组转化为字符串之字母的转换</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">str</span> = <span class="string">&#x27;&#x27;</span>.join(list12)</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">以空表示中间的没有任何标点符号，如果是&#x27;,&#x27;则是以,分隔，如P,C,为空则是PC</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>数组转换之数字的转换</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"><span class="built_in">str</span> = <span class="string">&#x27;,&#x27;</span>.join(<span class="built_in">str</span>(i) <span class="keyword">for</span> i <span class="keyword">in</span> b)</span><br></pre></td></tr></table></figure>
+
+<p>摘抄自网上</p>
+<p>字符串转化为数组</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">str</span> = <span class="string">&#x27;1,2,3&#x27;</span></span><br><span class="line">arr = <span class="built_in">str</span>.split(<span class="string">&#x27;,&#x27;</span>)</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ll-oridy.github.io/2021/04/04/Python%E4%B8%AD%E7%9A%84%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dai Ying">
+      <meta itemprop="description" content="myblog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DY">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/04/Python%E4%B8%AD%E7%9A%84%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0/" class="post-title-link" itemprop="url">Python中的斐波那契数</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-04-04 10:31:42 / 修改时间：10:42:51" itemprop="dateCreated datePublished" datetime="2021-04-04T10:31:42+08:00">2021-04-04</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
+<p>斐波那契数列（Fibonacci sequence），又称<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%BB%84%E9%87%91%E5%88%86%E5%89%B2/115896">黄金分割</a>数列，因数学家莱昂纳多·斐波那契（Leonardoda Fibonacci）以兔子繁殖为例子而引入，故又称为“<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%85%94%E5%AD%90%E6%95%B0%E5%88%97/6849441">兔子数列</a>”，指的是这样一个数列：0、1、1、2、3、5、8、13、21、34、……在数学上，斐波那契数列以如下被以递推的方法定义：<em>F</em>(0)=0，<em>F</em>(1)=1, <em>F</em>(n)=<em>F</em>(n - 1)+<em>F</em>(n - 2)（<em>n</em> ≥ 2，<em>n</em> ∈ N*）p;</p>
+</blockquote>
+<h3 id="求某个数的斐波那契数"><a href="#求某个数的斐波那契数" class="headerlink" title="求某个数的斐波那契数"></a>求某个数的斐波那契数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fib</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="keyword">if</span> n &lt;= <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> fib(n-<span class="number">1</span>) + fib(n-<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<p>可以通过上面这个函数体来求解</p>
+<h3 id="判断某个数是否为斐波那契数"><a href="#判断某个数是否为斐波那契数" class="headerlink" title="判断某个数是否为斐波那契数"></a>判断某个数是否为斐波那契数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">isfib</span>(<span class="params">n</span>):</span></span><br><span class="line">    phi = <span class="number">0.5</span> + <span class="number">0.5</span> * math.sqrt(<span class="number">5.0</span>)</span><br><span class="line">    a = phi * n</span><br><span class="line">    <span class="keyword">return</span> n == <span class="number">0</span> <span class="keyword">or</span> <span class="built_in">abs</span>(<span class="built_in">round</span>(a) - a) &lt; <span class="number">1.0</span> / n</span><br></pre></td></tr></table></figure>
+
+<p>这是我目前找到的最有效的方法，直接用数学公式来求解。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -761,286 +980,9 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://ll-oridy.github.io/2021/03/11/Java%E5%AD%A6%E4%B9%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Dai Ying">
-      <meta itemprop="description" content="myblog">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DY">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/11/Java%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">Java学习</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-11 20:41:37" itemprop="dateCreated datePublished" datetime="2021-03-11T20:41:37+08:00">2021-03-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-21 12:28:11" itemprop="dateModified" datetime="2021-03-21T12:28:11+08:00">2021-03-21</time>
-      </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Java的学习日记"><a href="#Java的学习日记" class="headerlink" title="Java的学习日记"></a>Java的学习日记</h1><h2 id="Java概述"><a href="#Java概述" class="headerlink" title="Java概述"></a>Java概述</h2><p>&nbsp;&nbsp;Java是一个面对对象的语言，这里我们就要讨论一下面对对象和面对过程的具体细节。它们分别是什么含义。</p>
-<h3 id="面对对象"><a href="#面对对象" class="headerlink" title="面对对象"></a>面对对象</h3><p>&nbsp;&nbsp;我理解的面向对象是指分开来完成，将程序分为几个板块进行实现。我在网上搜寻的过程中看见有一位大神将面向对象比喻成“做包子”，将包子皮专门做一堆，将包子馅做另外一堆，最后将二者一并完成。</p>
-<h3 id="面对过程"><a href="#面对过程" class="headerlink" title="面对过程"></a>面对过程</h3><p>&nbsp;&nbsp;以过程为核心，将程序进行一步步执行。这也就是每做一个包子时，都会按照一套程序顺序进行，不会出现单独做包子皮或者单独做包子馅的现象</p>
-<p>&nbsp;&nbsp;以上的理解如果有误还请纠正我。</p>
-<h3 id="Java的运行机制"><a href="#Java的运行机制" class="headerlink" title="Java的运行机制"></a>Java的运行机制</h3><p>&nbsp;&nbsp;Java是通过java虚拟机来进行实现的。并且java具有跨平台性。</p>
-<h2 id="Java的基本语法"><a href="#Java的基本语法" class="headerlink" title="Java的基本语法"></a>Java的基本语法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class Test </span><br><span class="line">&#123;</span><br><span class="line">    public stastic void main(String args[])</span><br><span class="line">    &#123;</span><br><span class="line">        ...;&#x2F;&#x2F;这里是函数体</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>&nbsp;&nbsp;<em>public</em> 是访问权限，<em>class</em> 是类标志，<em>Test</em> 是类名。</p>
-<p>输出语句一般是</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(...);</span><br></pre></td></tr></table></figure>
-
-<p>println指的是输出后换行，print指单纯输出，printf则和C语言中的含义相同。</p>
-<p>&nbsp;&nbsp;Java有一个不同于C语言的地方是，如果在结构体中要引用一个内容，需要在函数开头引入包。例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import javax.swing. * ; &#x2F;&#x2F;这里指的是引入全部包</span><br></pre></td></tr></table></figure>
-
-<h3 id="Java的基本数据类型"><a href="#Java的基本数据类型" class="headerlink" title="Java的基本数据类型"></a>Java的基本数据类型</h3><p><em>字节型(byte)</em> , <em>短整型(short)</em> , <em>整型(int)</em> , <em>长整(long)</em> , <em>单精度(float)</em> , <em>双精度(double)</em> </p>
-<p><em>字符(char)</em> , <em>布尔型(boolean)</em></p>
-<p>其中布尔型只有 <em>True</em> 和 <em>False</em></p>
-<h4 id="常量和变量"><a href="#常量和变量" class="headerlink" title="常量和变量"></a>常量和变量</h4><p>&nbsp;&nbsp;<em>变量在类中定义，是全局变量</em>。<em>在函数中定义是局部变量</em>，<strong>只对函数体有关</strong></p>
-<p>常量名一般用全大写表示，在常量的申明中多一个 <em>final</em> 关键字，赋予一个固定值。</p>
-<p>对于我这个萌新而言，在作业题中我找到了这个</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">final int DAY &#x3D; 24;&#x2F;&#x2F;这种写法是正确滴</span><br></pre></td></tr></table></figure>
-
-<h4 id="标识符的提醒"><a href="#标识符的提醒" class="headerlink" title="标识符的提醒"></a>标识符的提醒</h4><p><strong>美元符号</strong>，<strong>字母</strong>，<strong>数字</strong>，<strong>下划线</strong>构成</p>
-<p><em><strong>数字不能打头</strong></em></p>
-<h4 id="除十进制外的其他进制"><a href="#除十进制外的其他进制" class="headerlink" title="除十进制外的其他进制"></a>除十进制外的其他进制</h4><p>&nbsp;&nbsp;如下图</p>
-<p><img src="https://i.loli.net/2021/03/21/Q1eoWhiNk3YU87u.png" alt="image"></p>
-<h4 id="是否能进行比较"><a href="#是否能进行比较" class="headerlink" title="是否能进行比较"></a>是否能进行比较</h4><p>&nbsp;&nbsp;浮点数是不能进行比较的，因为小数点后有很多位数，非常不准确，但是整型可以直接进行比较。<em>在银行系统中，不要使用float</em> 。</p>
-<h3 id="Java的数据类型转换"><a href="#Java的数据类型转换" class="headerlink" title="Java的数据类型转换"></a>Java的数据类型转换</h3><p>&nbsp;&nbsp;把级别低的变量赋值给高的时候，自动进行转换</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int x &#x3D; 10;</span><br><span class="line">float y &#x3D; x;</span><br></pre></td></tr></table></figure>
-
-<p>由于float比int高，把低级别的赋值给高级别。</p>
-<p>&nbsp;&nbsp;把高级别赋值给低级别时，要进行强制类型转换</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int a;</span><br><span class="line">double b &#x3D; 3.14;</span><br><span class="line">a &#x3D; (int)b;</span><br></pre></td></tr></table></figure>
-<p>精度高低为</p>
-<p>byte -&gt; short -&gt; int -&gt; long -&gt; float -&gt; double</p>
-<p>低——————————————–&gt;高</p>
-<h3 id="基本运算"><a href="#基本运算" class="headerlink" title="基本运算"></a>基本运算</h3><p>&nbsp;&nbsp;在取余运算时，运算结果与左操作数相同</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-10 % 3 &#x3D; -1</span><br></pre></td></tr></table></figure>
-
-<h4 id="i-和-i-的区别"><a href="#i-和-i-的区别" class="headerlink" title="++i 和 i++ 的区别"></a><em><strong>++i</strong></em> 和 <em><strong>i++</strong></em> 的区别</h4><p><strong>++i：先使用后加减</strong></p>
-<p><strong>i++：先加减后使用</strong></p>
-<p>&nbsp;&nbsp;这是我从学C语言开始就非常的困惑，现在我也了解的不太完全，今后还要继续去理解，下面这段代码可以解决我的一时之困惑。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int x &#x3D; 1;</span><br><span class="line">int y &#x3D; (++x) * 5;</span><br></pre></td></tr></table></figure>
-
-<p>最后的结果:x = 2,y = 10;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int x &#x3D; 1;</span><br><span class="line">int y &#x3D; (x++) * 5;</span><br></pre></td></tr></table></figure>
-
-<p>最后的结果: x = 2,y = 5;//明天去验证一下研究研究</p>
-<h4 id="运算顺序"><a href="#运算顺序" class="headerlink" title="运算顺序"></a>运算顺序</h4><p>&nbsp;&nbsp;一般而言，算术，关系等二元运算符是顺序运算</p>
-<p>&nbsp;&nbsp;一元和三目运算符是从右到左也就是逆序运算</p>
-<p>···未完待续</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://ll-oridy.github.io/2021/03/10/python%E7%9A%84%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Dai Ying">
-      <meta itemprop="description" content="myblog">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DY">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/10/python%E7%9A%84%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/" class="post-title-link" itemprop="url">python的学习日记</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-10 22:16:40" itemprop="dateCreated datePublished" datetime="2021-03-10T22:16:40+08:00">2021-03-10</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-11 14:04:12" itemprop="dateModified" datetime="2021-03-11T14:04:12+08:00">2021-03-11</time>
-      </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Python学习"><a href="#Python学习" class="headerlink" title="Python学习"></a>Python学习</h1><h2 id="在学校训练中遇到一些情况"><a href="#在学校训练中遇到一些情况" class="headerlink" title="在学校训练中遇到一些情况"></a>在学校训练中遇到一些情况</h2><h3 id="第一课"><a href="#第一课" class="headerlink" title="第一课"></a>第一课</h3><p>&nbsp;&nbsp;第一课的内容很简单，基本就是学会一些输入和输出,但是我却遇到一些奇怪且弱智的问题。</p>
-<h4 id="这里是源代码"><a href="#这里是源代码" class="headerlink" title="这里是源代码"></a>这里是源代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">next_year &#x3D; 100 * (1 + 0.1)**7</span><br><span class="line">print(&quot;After 7 years,you will have &quot;,end&#x3D;&#39;&#39;)</span><br><span class="line">print(&quot;%.2f&quot; % next_year,end&#x3D;&#39;&#39;)</span><br><span class="line">print(&quot;.&quot;)</span><br></pre></td></tr></table></figure>
-
-<p>如果此题不需要修改小数的位数，或者是直接整形输出，在print部分可以将 <em>next_year</em> 强制转化为 <em>str(next_year)</em> 。由于这道题要思考这个问题，所以运用print分段写，在print的末尾放上 <em>end=’’</em> 来实现print语句在同一行。</p>
-<p>在小数问题上，保留位数可以有这样几种解决问题的方式：</p>
-<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p><em>我倾向用这个</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;%.nf&quot; % next_year)</span><br></pre></td></tr></table></figure>
-
-<p><em>我们书上用的是这个</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;&#123;:.nf&#125;&quot;.format&#123;next_year&#125;)</span><br></pre></td></tr></table></figure>
-
-<p><em>网上查到的</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">round(next_year, n)</span><br></pre></td></tr></table></figure>
-
-<p>备注：这里的 <em>n</em> 指的是你要保留的位数，<em>next_year</em> 是你要执行的多位小数。</p>
-<p>更新中…</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://ll-oridy.github.io/2021/03/10/%E9%A6%96%E7%AF%87/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Dai Ying">
-      <meta itemprop="description" content="myblog">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DY">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/10/%E9%A6%96%E7%AF%87/" class="post-title-link" itemprop="url">首篇</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-10 10:40:53" itemprop="dateCreated datePublished" datetime="2021-03-10T10:40:53+08:00">2021-03-10</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-11 14:06:49" itemprop="dateModified" datetime="2021-03-11T14:06:49+08:00">2021-03-11</time>
-      </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Daiyingの世界"><a href="#Daiyingの世界" class="headerlink" title="Daiyingの世界"></a>Daiyingの世界</h1><h2 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h2><p>&ensp;&ensp;大家好，我是一名在读的大二学生，出生于湖北武汉，也是编程届的一个咸的不行的咸鱼。我的学习虽然很差劲，读的学校也非常辣鸡，但是我还是对未来的生活抱有希望，在这个博客我将记录我的日常学习生活和新学习的知识点。可能内容非常简单基础，对我而言也算是一种知识的积累。毕竟我认为我自己对于编程来说甚至都还没有入门，不过我相信只要我努力学，总有一天会上路的！</p>
-<h2 id="我的生活"><a href="#我的生活" class="headerlink" title="我的生活"></a>我的生活</h2><p>&ensp;&ensp;在业余时间我最常做的事就是追星，玩游戏和看书，我最喜欢的明星是来自BLACKPINK的金智秀，最喜欢玩的游戏也是智秀代言的跑跑卡丁车，最喜欢看的书是悬疑小说，尤其是作家宁杭一写的悬疑小说，我觉得他的《超禁忌游戏》最好看。每天我都会刷B站和微博，也会经常在Netflix上面看电影和动漫。我觉得我的生活每一天都很充实。</p>
-<h2 id="我的联系方式"><a href="#我的联系方式" class="headerlink" title="我的联系方式"></a>我的联系方式</h2><h3 id="我的邮箱：-108-108-111-x72-x69-x64-x79-64-49-x36-x33-x2e-99-111-109"><a href="#我的邮箱：-108-108-111-x72-x69-x64-x79-64-49-x36-x33-x2e-99-111-109" class="headerlink" title="我的邮箱：&#108;&#108;&#111;&#x72;&#x69;&#x64;&#x79;&#64;&#49;&#x36;&#x33;&#x2e;&#99;&#111;&#109;"></a>我的邮箱：<a href="mailto:&#108;&#108;&#111;&#x72;&#x69;&#x64;&#x79;&#64;&#49;&#x36;&#x33;&#x2e;&#99;&#111;&#109;">&#108;&#108;&#111;&#x72;&#x69;&#x64;&#x79;&#64;&#49;&#x36;&#x33;&#x2e;&#99;&#111;&#109;</a></h3><h3 id="我的IG-欢迎大家来玩！"><a href="#我的IG-欢迎大家来玩！" class="headerlink" title="我的IG,欢迎大家来玩！"></a>我的<a target="_blank" rel="noopener" href="https://www.instagram.com/suzuyu_d/">IG</a>,欢迎大家来玩！</h3><p>以上よろしくお願いいたします。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
 
 
 <script>

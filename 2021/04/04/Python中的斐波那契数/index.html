@@ -23,22 +23,20 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"ll-oridy.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
-<meta name="description" content="前言&amp;nbsp;&amp;nbsp;图形界面对于我而言是懵逼且痛苦的，可以说现阶段我在for循环中对于打印图形是最最最最头疼的。下面带来一道打印三角形的题目 打印的三角形 实现的代码123456789101112131415161718192021222324package math;public class Test01 &amp;#123;    public static void main(String[">
+<meta name="description" content="前言 斐波那契数列（Fibonacci sequence），又称黄金分割数列，因数学家莱昂纳多·斐波那契（Leonardoda Fibonacci）以兔子繁殖为例子而引入，故又称为“兔子数列”，指的是这样一个数列：0、1、1、2、3、5、8、13、21、34、……在数学上，斐波那契数列以如下被以递推的方法定义：F(0)&#x3D;0，F(1)&#x3D;1, F(n)&#x3D;F(n - 1)+F(n - 2)（n ≥ 2，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java的三角形打印">
-<meta property="og:url" content="http://ll-oridy.github.io/2021/03/25/Java%E7%9A%84%E4%B8%89%E8%A7%92%E5%BD%A2%E6%89%93%E5%8D%B0/index.html">
+<meta property="og:title" content="Python中的斐波那契数">
+<meta property="og:url" content="http://ll-oridy.github.io/2021/04/04/Python%E4%B8%AD%E7%9A%84%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0/index.html">
 <meta property="og:site_name" content="DY">
-<meta property="og:description" content="前言&amp;nbsp;&amp;nbsp;图形界面对于我而言是懵逼且痛苦的，可以说现阶段我在for循环中对于打印图形是最最最最头疼的。下面带来一道打印三角形的题目 打印的三角形 实现的代码123456789101112131415161718192021222324package math;public class Test01 &amp;#123;    public static void main(String[">
+<meta property="og:description" content="前言 斐波那契数列（Fibonacci sequence），又称黄金分割数列，因数学家莱昂纳多·斐波那契（Leonardoda Fibonacci）以兔子繁殖为例子而引入，故又称为“兔子数列”，指的是这样一个数列：0、1、1、2、3、5、8、13、21、34、……在数学上，斐波那契数列以如下被以递推的方法定义：F(0)&#x3D;0，F(1)&#x3D;1, F(n)&#x3D;F(n - 1)+F(n - 2)（n ≥ 2，">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://i.loli.net/2021/03/25/BpdaVNL3WvM95RO.png">
-<meta property="article:published_time" content="2021-03-25T06:27:06.000Z">
-<meta property="article:modified_time" content="2021-03-25T06:45:25.335Z">
+<meta property="article:published_time" content="2021-04-04T02:31:42.000Z">
+<meta property="article:modified_time" content="2021-04-04T02:42:51.032Z">
 <meta property="article:author" content="Dai Ying">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.loli.net/2021/03/25/BpdaVNL3WvM95RO.png">
 
 
-<link rel="canonical" href="http://ll-oridy.github.io/2021/03/25/Java%E7%9A%84%E4%B8%89%E8%A7%92%E5%BD%A2%E6%89%93%E5%8D%B0/">
+<link rel="canonical" href="http://ll-oridy.github.io/2021/04/04/Python%E4%B8%AD%E7%9A%84%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0/">
 
 
 <script class="page-configurations">
@@ -50,7 +48,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>Java的三角形打印 | DY</title>
+<title>Python中的斐波那契数 | DY</title>
   
 
 
@@ -150,7 +148,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%93%E5%8D%B0%E7%9A%84%E4%B8%89%E8%A7%92%E5%BD%A2"><span class="nav-number">2.</span> <span class="nav-text">打印的三角形</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="nav-number">3.</span> <span class="nav-text">实现的代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E6%88%91%E7%90%86%E8%A7%A3"><span class="nav-number">4.</span> <span class="nav-text">自我理解</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B1%82%E6%9F%90%E4%B8%AA%E6%95%B0%E7%9A%84%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text">求某个数的斐波那契数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E6%9F%90%E4%B8%AA%E6%95%B0%E6%98%AF%E5%90%A6%E4%B8%BA%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0"><span class="nav-number">3.</span> <span class="nav-text">判断某个数是否为斐波那契数</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -203,7 +201,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://ll-oridy.github.io/2021/03/25/Java%E7%9A%84%E4%B8%89%E8%A7%92%E5%BD%A2%E6%89%93%E5%8D%B0/">
+    <link itemprop="mainEntityOfPage" href="http://ll-oridy.github.io/2021/04/04/Python%E4%B8%AD%E7%9A%84%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -216,7 +214,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Java的三角形打印
+          Python中的斐波那契数
         </h1>
 
         <div class="post-meta-container">
@@ -228,7 +226,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-03-25 14:27:06 / 修改时间：14:45:25" itemprop="dateCreated datePublished" datetime="2021-03-25T14:27:06+08:00">2021-03-25</time>
+      <time title="创建时间：2021-04-04 10:31:42 / 修改时间：10:42:51" itemprop="dateCreated datePublished" datetime="2021-04-04T10:31:42+08:00">2021-04-04</time>
     </span>
 
   
@@ -241,13 +239,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>&nbsp;&nbsp;图形界面对于我而言是懵逼且痛苦的，可以说现阶段我在for循环中对于打印图形是最最最最头疼的。下面带来一道打印三角形的题目</p>
-<h3 id="打印的三角形"><a href="#打印的三角形" class="headerlink" title="打印的三角形"></a>打印的三角形</h3><p><img src="https://i.loli.net/2021/03/25/BpdaVNL3WvM95RO.png" alt="image"></p>
-<h3 id="实现的代码"><a href="#实现的代码" class="headerlink" title="实现的代码"></a>实现的代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> math;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test01</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//外层循环，打印5排</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">5</span>; i++) &#123;</span><br><span class="line">            <span class="comment">//打印三角形空白的上半部分</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">5</span>; j &gt;= i; j--) &#123;</span><br><span class="line">                System.out.print(<span class="string">&quot; &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//打印三角形的下半部分</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>;j&lt;=i;j++)&#123;</span><br><span class="line">                System.out.print(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>;j&lt; i;j++)&#123;</span><br><span class="line">                System.out.print(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//每打印一行换行</span></span><br><span class="line">            System.out.println();</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
+<p>斐波那契数列（Fibonacci sequence），又称<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%BB%84%E9%87%91%E5%88%86%E5%89%B2/115896">黄金分割</a>数列，因数学家莱昂纳多·斐波那契（Leonardoda Fibonacci）以兔子繁殖为例子而引入，故又称为“<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%85%94%E5%AD%90%E6%95%B0%E5%88%97/6849441">兔子数列</a>”，指的是这样一个数列：0、1、1、2、3、5、8、13、21、34、……在数学上，斐波那契数列以如下被以递推的方法定义：<em>F</em>(0)=0，<em>F</em>(1)=1, <em>F</em>(n)=<em>F</em>(n - 1)+<em>F</em>(n - 2)（<em>n</em> ≥ 2，<em>n</em> ∈ N*）p;</p>
+</blockquote>
+<h3 id="求某个数的斐波那契数"><a href="#求某个数的斐波那契数" class="headerlink" title="求某个数的斐波那契数"></a>求某个数的斐波那契数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fib</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="keyword">if</span> n &lt;= <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> fib(n-<span class="number">1</span>) + fib(n-<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
 
-<h3 id="自我理解"><a href="#自我理解" class="headerlink" title="自我理解"></a>自我理解</h3><p>&nbsp;&nbsp;对于打印三角形，首先是一个正方形，通过对称先打印一半，在打印另外一半时</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>;j&lt; i;j++)&#123;</span><br><span class="line">    System.out.print(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>此时j&lt;i而不是&lt;=,学会利用debug</p>
+<p>可以通过上面这个函数体来求解</p>
+<h3 id="判断某个数是否为斐波那契数"><a href="#判断某个数是否为斐波那契数" class="headerlink" title="判断某个数是否为斐波那契数"></a>判断某个数是否为斐波那契数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">isfib</span>(<span class="params">n</span>):</span></span><br><span class="line">    phi = <span class="number">0.5</span> + <span class="number">0.5</span> * math.sqrt(<span class="number">5.0</span>)</span><br><span class="line">    a = phi * n</span><br><span class="line">    <span class="keyword">return</span> n == <span class="number">0</span> <span class="keyword">or</span> <span class="built_in">abs</span>(<span class="built_in">round</span>(a) - a) &lt; <span class="number">1.0</span> / n</span><br></pre></td></tr></table></figure>
+
+<p>这是我目前找到的最有效的方法，直接用数学公式来求解。</p>
 
     </div>
 
@@ -261,13 +261,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/03/22/next-%E5%92%8CnextLine-%E5%8C%BA%E5%88%AB/" rel="prev" title="next()和nextLine()区别">
-                  <i class="fa fa-chevron-left"></i> next()和nextLine()区别
+                <a href="/2021/03/27/Java%E4%B8%AD%E6%9C%80%E5%9F%BA%E6%9C%AC%E7%9A%84%E6%96%B9%E6%B3%95%E9%87%8D%E8%BC%89%E5%95%8F%E9%A1%8C/" rel="prev" title="Java中最基本的方法重載問題">
+                  <i class="fa fa-chevron-left"></i> Java中最基本的方法重載問題
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/03/27/Java%E4%B8%AD%E6%9C%80%E5%9F%BA%E6%9C%AC%E7%9A%84%E6%96%B9%E6%B3%95%E9%87%8D%E8%BC%89%E5%95%8F%E9%A1%8C/" rel="next" title="Java中最基本的方法重載問題">
-                  Java中最基本的方法重載問題 <i class="fa fa-chevron-right"></i>
+                <a href="/2021/04/04/Python%E4%B8%AD%E5%8F%A5%E5%AD%90%E9%A6%96%E5%AD%97%E6%AF%8D%E9%97%AE%E9%A2%98/" rel="next" title="Python中句子首字母问题">
+                  Python中句子首字母问题 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
