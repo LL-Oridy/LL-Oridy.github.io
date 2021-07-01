@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -779,150 +779,6 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://ll-oridy.github.io/2021/03/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E5%88%9D%E8%AF%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Dai Ying">
-      <meta itemprop="description" content="myblog">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DY">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E5%88%9D%E8%AF%86/" class="post-title-link" itemprop="url">计算机网络的初识</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-12 09:59:33 / 修改时间：11:38:50" itemprop="dateCreated datePublished" datetime="2021-03-12T09:59:33+08:00">2021-03-12</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>To be honest，作为一个计算机专业的学生，我对计算机一点也不了解。我不知道什么是DNS，什么是网络带宽，是一个完完全全一窍不通的白中白，所以希望我能学的好吧^^</p>
-<h2 id="大体介绍"><a href="#大体介绍" class="headerlink" title="大体介绍"></a>大体介绍</h2><p>计算机网络始于20世纪50年代，在我们现在用的计算机之前一共经历了四个阶段，产生巨大影响的是 <em>阶段二</em> 和 <em>阶段三</em></p>
-<h3 id="阶段二"><a href="#阶段二" class="headerlink" title="阶段二"></a>阶段二</h3><p>主要是产生了计算机网络，由ARPANET研究提出了</p>
-<ol>
-<li>资源子网和通信子网的两个概念</li>
-<li>研究了报文 <em>分组交换</em> 的数据交换方法</li>
-<li>采用了层次化的网络体系结构模型和协议体系</li>
-<li>促进 <em>IP/TCP</em> 协议的发展</li>
-</ol>
-<h4 id="啥是IP-TCP协议"><a href="#啥是IP-TCP协议" class="headerlink" title="啥是IP/TCP协议"></a>啥是IP/TCP协议</h4><p>在维基百科上我找到了这样的解释</p>
-<blockquote>
-<p>互联网协议套件（英语：Internet Protocol Suite，缩写IPS）[1]是网络通信模型，以及整个网络传输协议家族，为网际网络的基础通信架构。它常通称为TCP/IP协议族（英语：TCP/IP Protocol Suite，或TCP/IP Protocols），简称TCP/IP[2]。因为该协议家族的两个核心协议：TCP（传输控制协议）和IP（网际协议），为该家族中最早通过的标准[3]。由于在网络通讯协议普遍采用分层的结构，当多个层次的协议共同工作时，类似计算机科学中的堆栈，因此又称为TCP/IP协议栈（英语：TCP/IP Protocol Stack）</p>
-</blockquote>
-<p>但是我觉得比较能够理解的是下面这句话</p>
-<blockquote>
-<p>TCP/IP提供了点对点链接的机制，将资料应该如何封装、寻址、传输、路由以及在目的地如何接收，都加以标准化。它将软件通信过程抽象化为四个抽象层，采取协议堆栈的方式，分别实现出不同通信协议。</p>
-</blockquote>
-<p>不过学到现在我还是不太能理解，所以等到学到后面我理解了之后会重新修改 XD</p>
-<h3 id="阶段三"><a href="#阶段三" class="headerlink" title="阶段三"></a>阶段三</h3><p>主要是网络体系结构的标准化<br>我理解的是：每个公司要完成产品的互联互通，必须有一个标准，于是乎每个公司都有了自己的标准。但是这太过于局限了，所以 <em>国际标准化 ISO 组织提出了 <strong>OSI</strong> 标准</em>，各个公司只要遵循这个标准，就真正意义上实现了互联互通。</p>
-<h2 id="关于计算机网络的定义"><a href="#关于计算机网络的定义" class="headerlink" title="关于计算机网络的定义"></a>关于计算机网络的定义</h2><ol>
-<li>广义的观点</li>
-<li>资源共享的观点</li>
-<li>用户透明性的观点</li>
-</ol>
-<h3 id="资源共享的观点"><a href="#资源共享的观点" class="headerlink" title="资源共享的观点"></a>资源共享的观点</h3><p><strong>第一条我觉得很重要</strong></p>
-<ol>
-<li>建立的目的是实现资源共享</li>
-<li>计算机之间没有主从关系，每台计算机都是独立的</li>
-<li>必须遵行共同的协议</li>
-</ol>
-<h4 id="资源共享的基础"><a href="#资源共享的基础" class="headerlink" title="资源共享的基础"></a>资源共享的基础</h4><p>基础是数据通信</p>
-<h2 id="网络的构成"><a href="#网络的构成" class="headerlink" title="网络的构成"></a>网络的构成</h2><p>网络由若干的 <strong>节点(Node)</strong> 和 <strong>链路(Link)</strong> 组成</p>
-<h2 id="计算机网络的逻辑结构"><a href="#计算机网络的逻辑结构" class="headerlink" title="计算机网络的逻辑结构"></a>计算机网络的逻辑结构</h2><p>负责处理的 <em>主机</em> 和 <em>终端</em></p>
-<p>互联网的网络好比云，咱们的主机便是因特网的边缘部分，也就是资源子网，云就是因特网的核心部分，也就是通信子网。</p>
-<h3 id="核心部分"><a href="#核心部分" class="headerlink" title="核心部分"></a>核心部分</h3><blockquote>
-<p>核心部分由大量网络和连接这些网络的路由器组成。为边缘部分提供服务的(提供连通性和交换)</p>
-</blockquote>
-<h4 id="啥是分组交换"><a href="#啥是分组交换" class="headerlink" title="啥是分组交换"></a>啥是分组交换</h4><p>就是对资源进行动态分配</p>
-<h5 id="电路交换的过程"><a href="#电路交换的过程" class="headerlink" title="电路交换的过程"></a>电路交换的过程</h5><ol>
-<li>建立连接</li>
-<li>交换数据</li>
-<li>释放数据</li>
-</ol>
-<h5 id="电路交换的特点"><a href="#电路交换的特点" class="headerlink" title="电路交换的特点"></a>电路交换的特点</h5><ol>
-<li>在数据交换前建立一条从发端到收端的 <em>物理通路</em>，</li>
-<li>在数据交换的全部时间内用户始终占用端到端的固定传输信道</li>
-<li>交换双方可实时进行数据交换而无延迟</li>
-</ol>
-<h5 id="电路交换的缺点"><a href="#电路交换的缺点" class="headerlink" title="电路交换的缺点"></a>电路交换的缺点</h5><ol>
-<li>传输效率低</li>
-<li>数据交换往往有突发性和间歇性特征</li>
-<li>无灵活性</li>
-<li>任何一方出现故障要重新连接</li>
-</ol>
-<p>因此用分组交换来完成<br>分组交换能够通过当前状态进行动态分配</p>
-<h3 id="边缘部分"><a href="#边缘部分" class="headerlink" title="边缘部分"></a>边缘部分</h3><blockquote>
-<p>边缘部分由所有连接在因特网上的主机组成，用户直接使用的，用来进行通信和资源共享</p>
-</blockquote>
-<h4 id="小问题"><a href="#小问题" class="headerlink" title="小问题"></a>小问题</h4><p>网络应用是主机还是程序呢？</p>
-<p>网络应用是程序。</p>
-<h4 id="客户服务器的方式"><a href="#客户服务器的方式" class="headerlink" title="客户服务器的方式"></a>客户服务器的方式</h4><p>俗称 <em>C/S</em> 方式(Client/Server)</p>
-<p>是最常用最传统的方式，我们访问网站，发邮件都是这个方式。由客户端发起请求，服务器接受请求，我们便能获得自己想要的结果。</p>
-<h4 id="对等连接的方式"><a href="#对等连接的方式" class="headerlink" title="对等连接的方式"></a>对等连接的方式</h4><p>俗称 <em>P2P</em> 方式。</p>
-<p>只要两个主机都运用了P2P软件，它们就能直接交换信息来共享计算机的资源和服务。<em>不区分服务请求方或者是服务提供方</em> ，每个主机既是客户也是服务器。主要用于迅雷等软件下载和上传文件。</p>
-<h2 id="网络的分类"><a href="#网络的分类" class="headerlink" title="网络的分类"></a>网络的分类</h2><ol>
-<li>局域网(LAN)</li>
-<li>广域网(WAN)</li>
-<li>城域网(MAN)</li>
-<li>接入网(AN)</li>
-</ol>
-<h3 id="局域网-LAN"><a href="#局域网-LAN" class="headerlink" title="局域网(LAN)"></a>局域网(LAN)</h3><p>优势</p>
-<ol>
-<li>规模小</li>
-<li>硬件设备相对简单</li>
-<li>由于距离近传输速率高，误码率相对低</li>
-<li>组建方便，技术较简单</li>
-</ol>
-<h3 id="广域网-WAN"><a href="#广域网-WAN" class="headerlink" title="广域网(WAN)"></a>广域网(WAN)</h3><p>涉及范围大，广，因为传输较远，所以速率较低，误码率高于局域网，控制机制复杂</p>
-<h3 id="接入网-AN"><a href="#接入网-AN" class="headerlink" title="接入网(AN)"></a>接入网(AN)</h3><p>又称本地接入网和居民接入网，一般由ISP提供，用户与因特网连接的桥梁。</p>
-<h3 id="城域网-MAN"><a href="#城域网-MAN" class="headerlink" title="城域网(MAN)"></a>城域网(MAN)</h3><p>介于局域网和广域网之间，很多城市采用的是以太网技术。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://ll-oridy.github.io/2021/03/11/%E5%85%B3%E4%BA%8EScanner%E7%9A%84%E5%BC%95%E5%85%A5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -980,9 +836,127 @@
 
 
 
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ll-oridy.github.io/2021/03/11/Java%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dai Ying">
+      <meta itemprop="description" content="myblog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DY">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/11/Java%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">Java学习</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-11 20:41:37" itemprop="dateCreated datePublished" datetime="2021-03-11T20:41:37+08:00">2021-03-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-21 12:28:11" itemprop="dateModified" datetime="2021-03-21T12:28:11+08:00">2021-03-21</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Java的学习日记"><a href="#Java的学习日记" class="headerlink" title="Java的学习日记"></a>Java的学习日记</h1><h2 id="Java概述"><a href="#Java概述" class="headerlink" title="Java概述"></a>Java概述</h2><p>&nbsp;&nbsp;Java是一个面对对象的语言，这里我们就要讨论一下面对对象和面对过程的具体细节。它们分别是什么含义。</p>
+<h3 id="面对对象"><a href="#面对对象" class="headerlink" title="面对对象"></a>面对对象</h3><p>&nbsp;&nbsp;我理解的面向对象是指分开来完成，将程序分为几个板块进行实现。我在网上搜寻的过程中看见有一位大神将面向对象比喻成“做包子”，将包子皮专门做一堆，将包子馅做另外一堆，最后将二者一并完成。</p>
+<h3 id="面对过程"><a href="#面对过程" class="headerlink" title="面对过程"></a>面对过程</h3><p>&nbsp;&nbsp;以过程为核心，将程序进行一步步执行。这也就是每做一个包子时，都会按照一套程序顺序进行，不会出现单独做包子皮或者单独做包子馅的现象</p>
+<p>&nbsp;&nbsp;以上的理解如果有误还请纠正我。</p>
+<h3 id="Java的运行机制"><a href="#Java的运行机制" class="headerlink" title="Java的运行机制"></a>Java的运行机制</h3><p>&nbsp;&nbsp;Java是通过java虚拟机来进行实现的。并且java具有跨平台性。</p>
+<h2 id="Java的基本语法"><a href="#Java的基本语法" class="headerlink" title="Java的基本语法"></a>Java的基本语法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class Test </span><br><span class="line">&#123;</span><br><span class="line">    public stastic void main(String args[])</span><br><span class="line">    &#123;</span><br><span class="line">        ...;&#x2F;&#x2F;这里是函数体</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>&nbsp;&nbsp;<em>public</em> 是访问权限，<em>class</em> 是类标志，<em>Test</em> 是类名。</p>
+<p>输出语句一般是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(...);</span><br></pre></td></tr></table></figure>
+
+<p>println指的是输出后换行，print指单纯输出，printf则和C语言中的含义相同。</p>
+<p>&nbsp;&nbsp;Java有一个不同于C语言的地方是，如果在结构体中要引用一个内容，需要在函数开头引入包。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import javax.swing. * ; &#x2F;&#x2F;这里指的是引入全部包</span><br></pre></td></tr></table></figure>
+
+<h3 id="Java的基本数据类型"><a href="#Java的基本数据类型" class="headerlink" title="Java的基本数据类型"></a>Java的基本数据类型</h3><p><em>字节型(byte)</em> , <em>短整型(short)</em> , <em>整型(int)</em> , <em>长整(long)</em> , <em>单精度(float)</em> , <em>双精度(double)</em> </p>
+<p><em>字符(char)</em> , <em>布尔型(boolean)</em></p>
+<p>其中布尔型只有 <em>True</em> 和 <em>False</em></p>
+<h4 id="常量和变量"><a href="#常量和变量" class="headerlink" title="常量和变量"></a>常量和变量</h4><p>&nbsp;&nbsp;<em>变量在类中定义，是全局变量</em>。<em>在函数中定义是局部变量</em>，<strong>只对函数体有关</strong></p>
+<p>常量名一般用全大写表示，在常量的申明中多一个 <em>final</em> 关键字，赋予一个固定值。</p>
+<p>对于我这个萌新而言，在作业题中我找到了这个</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">final int DAY &#x3D; 24;&#x2F;&#x2F;这种写法是正确滴</span><br></pre></td></tr></table></figure>
+
+<h4 id="标识符的提醒"><a href="#标识符的提醒" class="headerlink" title="标识符的提醒"></a>标识符的提醒</h4><p><strong>美元符号</strong>，<strong>字母</strong>，<strong>数字</strong>，<strong>下划线</strong>构成</p>
+<p><em><strong>数字不能打头</strong></em></p>
+<h4 id="除十进制外的其他进制"><a href="#除十进制外的其他进制" class="headerlink" title="除十进制外的其他进制"></a>除十进制外的其他进制</h4><p>&nbsp;&nbsp;如下图</p>
+<p><img src="https://i.loli.net/2021/03/21/Q1eoWhiNk3YU87u.png" alt="image"></p>
+<h4 id="是否能进行比较"><a href="#是否能进行比较" class="headerlink" title="是否能进行比较"></a>是否能进行比较</h4><p>&nbsp;&nbsp;浮点数是不能进行比较的，因为小数点后有很多位数，非常不准确，但是整型可以直接进行比较。<em>在银行系统中，不要使用float</em> 。</p>
+<h3 id="Java的数据类型转换"><a href="#Java的数据类型转换" class="headerlink" title="Java的数据类型转换"></a>Java的数据类型转换</h3><p>&nbsp;&nbsp;把级别低的变量赋值给高的时候，自动进行转换</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int x &#x3D; 10;</span><br><span class="line">float y &#x3D; x;</span><br></pre></td></tr></table></figure>
+
+<p>由于float比int高，把低级别的赋值给高级别。</p>
+<p>&nbsp;&nbsp;把高级别赋值给低级别时，要进行强制类型转换</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int a;</span><br><span class="line">double b &#x3D; 3.14;</span><br><span class="line">a &#x3D; (int)b;</span><br></pre></td></tr></table></figure>
+<p>精度高低为</p>
+<p>byte -&gt; short -&gt; int -&gt; long -&gt; float -&gt; double</p>
+<p>低——————————————–&gt;高</p>
+<h3 id="基本运算"><a href="#基本运算" class="headerlink" title="基本运算"></a>基本运算</h3><p>&nbsp;&nbsp;在取余运算时，运算结果与左操作数相同</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-10 % 3 &#x3D; -1</span><br></pre></td></tr></table></figure>
+
+<h4 id="i-和-i-的区别"><a href="#i-和-i-的区别" class="headerlink" title="++i 和 i++ 的区别"></a><em><strong>++i</strong></em> 和 <em><strong>i++</strong></em> 的区别</h4><p><strong>++i：先使用后加减</strong></p>
+<p><strong>i++：先加减后使用</strong></p>
+<p>&nbsp;&nbsp;这是我从学C语言开始就非常的困惑，现在我也了解的不太完全，今后还要继续去理解，下面这段代码可以解决我的一时之困惑。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int x &#x3D; 1;</span><br><span class="line">int y &#x3D; (++x) * 5;</span><br></pre></td></tr></table></figure>
+
+<p>最后的结果:x = 2,y = 10;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int x &#x3D; 1;</span><br><span class="line">int y &#x3D; (x++) * 5;</span><br></pre></td></tr></table></figure>
+
+<p>最后的结果: x = 2,y = 5;//明天去验证一下研究研究</p>
+<h4 id="运算顺序"><a href="#运算顺序" class="headerlink" title="运算顺序"></a>运算顺序</h4><p>&nbsp;&nbsp;一般而言，算术，关系等二元运算符是顺序运算</p>
+<p>&nbsp;&nbsp;一元和三目运算符是从右到左也就是逆序运算</p>
+<p>···未完待续</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
 
 
 <script>
