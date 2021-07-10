@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -188,6 +188,74 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ll-oridy.github.io/2021/07/10/C%E8%AF%AD%E8%A8%80%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dai Ying">
+      <meta itemprop="description" content="myblog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DY">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/07/10/C%E8%AF%AD%E8%A8%80%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95/" class="post-title-link" itemprop="url">C语言矩阵乘法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-07-10 21:48:48 / 修改时间：21:55:13" itemprop="dateCreated datePublished" datetime="2021-07-10T21:48:48+08:00">2021-07-10</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>&nbsp;&nbsp;今天做到一个矩阵乘法的题，对这方面两个矩阵相乘不是很了解，在网上找到了解决方案学着写了一个，以后可能会修改当前的答案</p>
+<h3 id="相关代码"><a href="#相关代码" class="headerlink" title="相关代码"></a>相关代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NUM 10</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> arr1[NUM][NUM], arr2[NUM][NUM];</span><br><span class="line">	<span class="keyword">int</span> arr3[NUM][NUM] = &#123; <span class="number">0</span> &#125;;</span><br><span class="line">	<span class="keyword">int</span> a, b, c, d;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;输入第一个矩阵的行列(a,b):\n&quot;</span>);</span><br><span class="line">	scanf_s(<span class="string">&quot;%d %d&quot;</span>, &amp;a,&amp;b);</span><br><span class="line">	<span class="keyword">int</span> i, j, k;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;请依次输入行列式中的每个数：\n&quot;</span>);</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; a; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; b; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			scanf_s(<span class="string">&quot;%d&quot;</span>, &amp;arr1[i][j]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;输入第二个矩阵的行列(c,d):\n&quot;</span>);</span><br><span class="line">	scanf_s(<span class="string">&quot;%d %d&quot;</span>, &amp;c, &amp;d);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;请依次输入行列式中的每个数：\n&quot;</span>);</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; c; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; d; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			scanf_s(<span class="string">&quot;%d&quot;</span>, &amp;arr2[i][j]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (a != d) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;input error&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; a; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; b; j++) &#123;</span><br><span class="line">				<span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; d; k++)</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="comment">//根据行列式的公式进行计算</span></span><br><span class="line">					<span class="comment">//@1.第一个行列式的行和第二个的列相乘</span></span><br><span class="line">					arr3[i][j] = arr3[i][j] + arr1[i][k] * arr2[k][j];</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;所得的行列式是：\n&quot;</span>);</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; a; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; d; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, arr3[i][j]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;&nbsp;周末愉快！</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
