@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -188,6 +188,84 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ll-oridy.github.io/2021/07/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E9%93%BE%E8%A1%A8%E7%9A%84%E5%A4%B4%E6%8F%92%E5%92%8C%E5%B0%BE%E6%8F%92%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Dai Ying">
+      <meta itemprop="description" content="myblog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DY">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/07/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E9%93%BE%E8%A1%A8%E7%9A%84%E5%A4%B4%E6%8F%92%E5%92%8C%E5%B0%BE%E6%8F%92%E6%B3%95/" class="post-title-link" itemprop="url">数据结构之链表的头插和尾插法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-07-18 11:04:14 / 修改时间：11:26:51" itemprop="dateCreated datePublished" datetime="2021-07-18T11:04:14+08:00">2021-07-18</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="插入思路"><a href="#插入思路" class="headerlink" title="插入思路"></a>插入思路</h3><p>我好像也没弄清楚</p>
+<h3 id="具体代码"><a href="#具体代码" class="headerlink" title="具体代码"></a>具体代码</h3><h4 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span><span class="comment">//node不能省略</span></span><br><span class="line">	<span class="keyword">int</span> num;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">node</span> *<span class="title">pNext</span>;</span><span class="comment">//指针大小是固定的</span></span><br><span class="line">&#125;Node_t, *pNode_t;</span><br></pre></td></tr></table></figure>
+
+<h4 id="头插法"><a href="#头插法" class="headerlink" title="头插法"></a>头插法</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">headInsert</span><span class="params">(pNode_t* ppHead, pNode_t* ppTail, <span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">	pNode_t pNew = (pNode_t)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Node_t));<span class="comment">//分配Node_t的大小</span></span><br><span class="line">	<span class="built_in">memset</span>(pNew, <span class="number">0</span>, <span class="keyword">sizeof</span>(Node_t));</span><br><span class="line">	<span class="comment">//指针域已经是空指针</span></span><br><span class="line">	pNew-&gt;num = num;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (*ppHead == <span class="literal">NULL</span>) &#123;</span><br><span class="line">		*ppHead = pNew;</span><br><span class="line">		*ppTail = pNew;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		pNew-&gt;pNext = *ppHead;</span><br><span class="line">		*ppHead = pNew;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2021/07/18/5gtGsAR2NDUkmap.jpg" alt="headInsert.jpg"></p>
+<h4 id="尾插法"><a href="#尾插法" class="headerlink" title="尾插法"></a>尾插法</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">tailInsert</span><span class="params">(pNode_t* ppHead, pNode_t* ppTail, <span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">	pNode_t pNew = (pNode_t)<span class="built_in">calloc</span>(<span class="number">1</span>,<span class="keyword">sizeof</span>(Node_t));<span class="comment">//分配Node_t的大小</span></span><br><span class="line">	<span class="comment">//malloc+memset</span></span><br><span class="line">	pNew-&gt;num = num;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (*ppHead == <span class="literal">NULL</span>) &#123;</span><br><span class="line">		*ppHead = pNew;</span><br><span class="line">		*ppTail = pNew;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		(*ppTail)-&gt;pNext = pNew;</span><br><span class="line">		*ppTail = pNew;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2021/07/18/qpiPb5tvyeTAFQm.jpg" alt="tailInsert.jpg"></p>
+<h4 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">node.h:</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span><span class="comment">//node不能省略</span></span><br><span class="line">	<span class="keyword">int</span> num;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">node</span> *<span class="title">pNext</span>;</span><span class="comment">//指针大小是固定的</span></span><br><span class="line">&#125;Node_t, *pNode_t;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">headInsert</span><span class="params">(pNode_t* ppHead, pNode_t* ppTail, <span class="keyword">int</span> num)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">tailInsert</span><span class="params">(pNode_t* ppHead, pNode_t* ppTail, <span class="keyword">int</span> num)</span></span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;node.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//pHead&amp;pTail用来标识链表，一开始为空链表</span></span><br><span class="line">	pNode_t pHead = <span class="literal">NULL</span>;</span><br><span class="line">	pNode_t pTail = <span class="literal">NULL</span>;</span><br><span class="line">	<span class="keyword">int</span> num;</span><br><span class="line">	<span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;num) != EOF) &#123;</span><br><span class="line">		headInsert(&amp;pHead, &amp;pTail, num);</span><br><span class="line">		tailInsert(&amp;pHead, &amp;pTail, num);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//头插法</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">headInsert</span><span class="params">(pNode_t* ppHead, pNode_t* ppTail, <span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">	pNode_t pNew = (pNode_t)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Node_t));<span class="comment">//分配Node_t的大小</span></span><br><span class="line">	<span class="built_in">memset</span>(pNew, <span class="number">0</span>, <span class="keyword">sizeof</span>(Node_t));</span><br><span class="line">	<span class="comment">//指针域已经是空指针</span></span><br><span class="line">	pNew-&gt;num = num;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (*ppHead == <span class="literal">NULL</span>) &#123;</span><br><span class="line">		*ppHead = pNew;</span><br><span class="line">		*ppTail = pNew;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		pNew-&gt;pNext = *ppHead;</span><br><span class="line">		*ppHead = pNew;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//尾插法</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">tailInsert</span><span class="params">(pNode_t* ppHead, pNode_t* ppTail, <span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">	pNode_t pNew = (pNode_t)<span class="built_in">calloc</span>(<span class="number">1</span>,<span class="keyword">sizeof</span>(Node_t));<span class="comment">//分配Node_t的大小</span></span><br><span class="line">	<span class="comment">//malloc+memset</span></span><br><span class="line">	pNew-&gt;num = num;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (*ppHead == <span class="literal">NULL</span>) &#123;</span><br><span class="line">		*ppHead = pNew;</span><br><span class="line">		*ppTail = pNew;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		(*ppTail)-&gt;pNext = pNew;</span><br><span class="line">		*ppTail = pNew;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="额外补充"><a href="#额外补充" class="headerlink" title="额外补充"></a>额外补充</h3><p><img src="https://i.loli.net/2021/07/18/mDlvhnAGwYcRj2o.jpg" alt="malloc.jpg"></p>
+<p><img src="https://i.loli.net/2021/07/18/oxsVcajO1KQJTAi.jpg" alt="memset.jpg"></p>
+<p><img src="https://i.loli.net/2021/07/18/Pst4luT3njQ7Nfx.jpg" alt="calloc.jpg"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -828,78 +906,6 @@
 <h3 id="自我理解"><a href="#自我理解" class="headerlink" title="自我理解"></a>自我理解</h3><p>&nbsp;&nbsp;对于打印三角形，首先是一个正方形，通过对称先打印一半，在打印另外一半时</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>;j&lt; i;j++)&#123;</span><br><span class="line">    System.out.print(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>此时j&lt;i而不是&lt;=,学会利用debug</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://ll-oridy.github.io/2021/03/22/next-%E5%92%8CnextLine-%E5%8C%BA%E5%88%AB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Dai Ying">
-      <meta itemprop="description" content="myblog">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DY">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/22/next-%E5%92%8CnextLine-%E5%8C%BA%E5%88%AB/" class="post-title-link" itemprop="url">next()和nextLine()区别</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-22 20:32:57 / 修改时间：20:47:09" itemprop="dateCreated datePublished" datetime="2021-03-22T20:32:57+08:00">2021-03-22</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="scanner-nextLine-遇换行结束"><a href="#scanner-nextLine-遇换行结束" class="headerlink" title="scanner.nextLine()遇换行结束"></a>scanner.nextLine()遇换行结束</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> math;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Mathe0</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//接收数据输入</span></span><br><span class="line">        Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        System.out.println(<span class="string">&quot;使用nextLine方式接收：&quot;</span>);</span><br><span class="line">        <span class="comment">//判断用户有没有输入字符串</span></span><br><span class="line">        <span class="keyword">if</span>(scanner.hasNextLine())&#123;</span><br><span class="line">            <span class="comment">//程序等待用户输入完毕</span></span><br><span class="line">            String str = scanner.nextLine();</span><br><span class="line">            System.out.println(<span class="string">&quot;输出的方式为：&quot;</span>+str);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//凡是属于IO的类如果不关闭会占用资源</span></span><br><span class="line">        scanner.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>可以删除if语句，下面是运行截图</p>
-<p><img src="https://i.loli.net/2021/03/22/JP1iqITmfM4EZLK.png" alt="image"></p>
-<h2 id="scanner-next-遇空格结束"><a href="#scanner-next-遇空格结束" class="headerlink" title="scanner.next()遇空格结束"></a>scanner.next()遇空格结束</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> math;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Mathe0</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//接收数据输入</span></span><br><span class="line">        Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        System.out.println(<span class="string">&quot;使用next方式接收：&quot;</span>);</span><br><span class="line">        <span class="comment">//判断用户有没有输入字符串</span></span><br><span class="line">        <span class="keyword">if</span>(scanner.hasNext())&#123;</span><br><span class="line">            <span class="comment">//程序等待用户输入完毕</span></span><br><span class="line">            String str = scanner.next();</span><br><span class="line">            System.out.println(<span class="string">&quot;输出的方式为：&quot;</span>+str);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//凡是属于IO的类如果不关闭会占用资源</span></span><br><span class="line">        scanner.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>下面是截图</p>
-<p><img src="https://i.loli.net/2021/03/22/DMHoKzS9AtQhrNl.png" alt="image"></p>
 
       
     </div>
